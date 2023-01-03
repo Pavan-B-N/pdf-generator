@@ -34,8 +34,8 @@ app.post("/", (req, res) => {
         doc.text(line,x,y)
         y+=10;
     })
-    doc.save(__dirname+"/payment_pdfs/"+name+".pdf")
-    res.send("http://localhost:3030/"+name+".pdf")
+    doc.save(__dirname+"/payment_pdfs/"+srn+".pdf")
+    res.send("http://localhost:3030/"+srn+".pdf")
 })
 
 app.listen(port)
