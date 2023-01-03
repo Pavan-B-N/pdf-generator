@@ -7,6 +7,8 @@ const {jsPDF}=require("jspdf")
 app.use(express.static("payment_pdfs"))
 app.use(express.json())
 
+const port=process.env.PORT || 3030;
+
 app.get("/:uname",(req,res)=>{
     res.send("sorry , your pdf is not yet generated try again later")
 })
@@ -36,4 +38,4 @@ app.post("/", (req, res) => {
     res.send("http://localhost:3030/"+name+".pdf")
 })
 
-app.listen(3030)
+app.listen(port)
